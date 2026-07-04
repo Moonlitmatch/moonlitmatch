@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Moonlit Match</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="images/moon-reading.webp">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-purple-500 selection:text-white">
+
+    <!-- Main Content Container -->
+    <main class="max-w-xl mx-auto px-6 py-12 md:py-20 flex-1 flex flex-col justify-center w-full">
+        <div class="space-y-6 text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                Contact Us
+            </h1>
+            <p class="text-slate-400 text-sm leading-relaxed">
+                Have questions, suggestions, or feedback regarding our platform content? Drop your message below and our cosmic support team will get back to you within 24–48 hours.
+            </p>
+        </div>
+
+        <!-- Styled Contact Form -->
+        <form action="#" method="POST" class="mt-8 space-y-4 w-full text-left">
+            <div>
+                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-purple-300 mb-2">Your Name</label>
+                <input type="text" id="name" name="name" required 
+                       class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-purple-500 text-sm transition-colors">
+            </div>
+
+            <div>
+                <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-purple-300 mb-2">Email Address</label>
+                <input type="email" id="email" name="email" required 
+                       class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-purple-500 text-sm transition-colors">
+            </div>
+
+            <div>
+                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-purple-300 mb-2">Message</label>
+                <textarea id="message" name="message" rows="5" required 
+                          class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-purple-500 text-sm transition-colors resize-none"></textarea>
+            </div>
+
+            <div class="pt-2">
+                <!-- Button expands nicely for easy clicking -->
+                <button type="submit" 
+                        class="w-full inline-flex justify-center items-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-purple-900/20 transform hover:-translate-y-0.5 transition-all duration-200 text-sm cursor-pointer">
+                    ✨ Send Cosmic Message
+                </button>
+            </div>
+        </form>
+
+        <div class="pt-8 text-center md:text-left">
+            <a href="/" class="text-purple-400 hover:text-purple-300 underline text-sm transition-colors">← Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/60 border-t border-slate-900 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Moonlit Match. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
