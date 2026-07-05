@@ -11,37 +11,35 @@
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-rose-500 selection:text-white">
 
-    <!-- Main Content Container: Handled as a grid on desktop for side-by-side, column on mobile -->
-    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 flex flex-col md:grid md:grid-cols-2 items-center gap-12">
+    <!-- Main Content Container: Flex-col handles mobile stacking; md:flex-row handles side-by-side desktop view -->
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-12">
         
-        <!-- HEADLINE & SUB-TEXT: Appears first on mobile -->
-        <div class="space-y-4 text-center md:text-left order-1 flex flex-col items-center md:items-start">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">
-                Are You Walking Past Your Soulmate Every Day?
-            </h1>
-            <p class="text-xl font-medium text-rose-200 italic">
-                One name. One soulmate drawing.
-            </p>
-            <p class="text-slate-400 leading-relaxed text-base hidden md:block">
-                A portrait drawn from the energy of your name alone — revealing the face you were always meant to find.
-            </p>
-        </div>
-        
-        <!-- IMAGE COLUMN: Placed beautifully under the headline on mobile, on the right side on desktop -->
-        <div class="max-w-sm md:max-w-none w-full order-2 md:col-start-2 md:row-start-1 md:row-span-2">
-            <a href="https://f19afosczcj6a3qmnjidv3eu4h.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
-                <img src="../images/soulmate-sketch.webp" 
-                     alt="Soulmate Sketch Portrait" 
-                     width="400"
-                     height="400"
-                     loading="eager"
-                     class="rounded-2xl shadow-2xl border border-rose-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto max-h-[320px] md:max-h-none object-cover mx-auto">
-            </a>
-        </div>
-        
-        <!-- CTA & FEATURES: Sits directly under the image on mobile -->
-        <div class="space-y-6 text-center md:text-left order-3 flex flex-col items-center md:items-start w-full">
-            <p class="text-slate-400 leading-relaxed text-base md:hidden">
+        <!-- TEXT & CTA COLUMN -->
+        <div class="flex-1 space-y-6 text-center md:text-left flex flex-col items-center md:items-start">
+            
+            <!-- Mobile Stacking Trick: We use standard layout blocks, but manually force the image between header components only on small viewports -->
+            <div class="space-y-4 flex flex-col items-center md:items-start">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">
+                    Are You Walking Past Your Soulmate Every Day?
+                </h1>
+                <p class="text-xl font-medium text-rose-200 italic">
+                    One name. One soulmate drawing.
+                </p>
+            </div>
+
+            <!-- MOBILE-ONLY IMAGE: Only renders on mobile/tablet viewports, exactly where you want it -->
+            <div class="block md:hidden max-w-sm w-full py-2">
+                <a href="https://f19afosczcj6a3qmnjidv3eu4h.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
+                    <img src="../images/soulmate-sketch.webp" 
+                         alt="Soulmate Sketch Portrait" 
+                         width="400"
+                         height="400"
+                         loading="eager"
+                         class="rounded-2xl shadow-2xl border border-rose-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto max-h-[350px] object-cover mx-auto">
+                </a>
+            </div>
+
+            <p class="text-slate-400 leading-relaxed text-base">
                 A portrait drawn from the energy of your name alone — revealing the face you were always meant to find.
             </p>
 
@@ -69,6 +67,18 @@
                     <p class="text-slate-400 text-sm">Delivered as a high-resolution digital piece — frame it, keep it, carry the vision with you always.</p>
                 </div>
             </div>
+        </div>
+
+        <!-- DESKTOP-ONLY IMAGE COLUMN: Hidden completely on mobile, renders seamlessly on the right for desktop layouts -->
+        <div class="hidden md:block flex-1 max-w-none w-full">
+            <a href="https://f19afosczcj6a3qmnjidv3eu4h.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
+                <img src="../images/soulmate-sketch.webp" 
+                     alt="Soulmate Sketch Portrait" 
+                     width="400"
+                     height="400"
+                     loading="eager"
+                     class="rounded-2xl shadow-2xl border border-rose-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto object-cover">
+            </a>
         </div>
 
     </main>
