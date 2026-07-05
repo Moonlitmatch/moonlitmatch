@@ -12,23 +12,40 @@
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-purple-500 selection:text-white">
 
-    <!-- Main Content Container -->
+    <!-- Main Content Container: Flex-col handles mobile stacking; md:flex-row handles side-by-side desktop view -->
     <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-12">
         
-        <!-- Left Column: Copy & CTAs (Mobile-centered, desktop left-aligned) -->
+        <!-- TEXT & CTA COLUMN -->
         <div class="flex-1 space-y-6 text-center md:text-left flex flex-col items-center md:items-start">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">
-                Unveil Your Celestial Blueprint
-            </h1>
-            <p class="text-xl font-medium text-purple-200 italic">
-                The moon held its breath the night you were born.
-            </p>
+            
+            <!-- Mobile Stacking Structure: Groups headers together before injecting the mobile asset -->
+            <div class="space-y-4 flex flex-col items-center md:items-start">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent leading-tight">
+                    Unveil Your Celestial Blueprint
+                </h1>
+                <p class="text-xl font-medium text-purple-200 italic">
+                    The moon held its breath the night you were born.
+                </p>
+            </div>
+
+            <!-- MOBILE-ONLY IMAGE: Renders right underneath the hook on mobile screens for immediate visual curiosity -->
+            <div class="block md:hidden max-w-sm w-full py-2">
+                <a href="https://1d126i3m-7f-52qju952rg3lft.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
+                    <img src="images/moon-reading.webp" 
+                         alt="Moon Reading Celestial Blueprint" 
+                         width="400"
+                         height="400"
+                         loading="eager"
+                         class="rounded-2xl shadow-2xl border border-purple-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto max-h-[350px] object-cover mx-auto">
+                </a>
+            </div>
+
             <p class="text-slate-400 leading-relaxed text-base">
                 Your personalized astrological reading decodes the exact lunar phase, sign, and house placement that shaped your soul's deepest design — revealing the hidden forces that govern your intuition, emotions, and destiny.
             </p>
 
             <!-- CTA Button (Full width on mobile, auto on desktop) -->
-            <div class="pt-4 w-full md:w-auto">
+            <div class="pt-2 w-full md:w-auto">
                 <a href="https://1d126i3m-7f-52qju952rg3lft.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" 
                    rel="noopener nofollow" 
                    class="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-purple-900/40 transform hover:-translate-y-0.5 transition-all duration-200">
@@ -53,27 +70,28 @@
             </div>
         </div>
 
-        <!-- Right Column: Featured Image -->
-        <div class="flex-1 max-w-sm md:max-w-none">
+        <!-- DESKTOP-ONLY IMAGE COLUMN: Disappears on mobile, renders on the right side for desktop viewports -->
+        <div class="hidden md:block flex-1 max-w-none w-full">
             <a href="https://1d126i3m-7f-52qju952rg3lft.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
-                <!-- Swapped to WebP, added layout constraints to prevent shifting -->
                 <img src="images/moon-reading.webp" 
                      alt="Moon Reading Celestial Blueprint" 
                      width="400"
                      height="400"
-                     loading="lazy"
-                     class="rounded-2xl shadow-2xl border border-purple-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto">
+                     loading="eager"
+                     class="rounded-2xl shadow-2xl border border-purple-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto object-cover">
             </a>
         </div>
+
     </main>
 
     <!-- Footer & Disclaimers -->
     <footer class="bg-slate-900/60 border-t border-slate-900 py-10 px-6 text-center text-xs text-slate-500 space-y-4">
         <div class="max-w-3xl mx-auto space-y-3">
-            <p class="text-slate-400">
-                <a href="#privacy" class="hover:text-purple-400 underline transition-colors">Privacy Policy</a> | 
-                <a href="#terms" class="hover:text-purple-400 underline transition-colors">Terms of Service</a> | 
-                <a href="#contact" class="hover:text-purple-400 underline transition-colors">Contact Us</a>
+            <!-- FIXED: Linked paths updated to connect real legal and contact pages -->
+            <p class="text-slate-400 font-medium space-x-2">
+                <a href="/privacy" class="hover:text-purple-400 underline transition-colors">Privacy Policy</a> | 
+                <a href="/terms" class="hover:text-purple-400 underline transition-colors">Terms of Service</a> | 
+                <a href="/contact" class="hover:text-purple-400 underline transition-colors">Contact Us</a>
             </p>
             <p>
                 <strong>Disclaimer:</strong> This site contains affiliate links. If you choose to click a link and purchase a premium reading or sketch, we may receive a small commission at no additional cost to you. We only recommend trusted platforms.
