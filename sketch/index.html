@@ -7,41 +7,46 @@
     <meta name="description" content="Get a personalized soulmate drawing handcrafted from the vibrational energy of your name. Reveal the face you were always meant to find.">
     <!-- Tailwind CSS for clean presentation -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FIXED: Pointing tab icon locally to your soulmate asset -->
     <link rel="icon" href="../images/soulmate-sketch.webp">
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between font-sans selection:bg-rose-500 selection:text-white">
 
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-12">
+    <!-- Main Content Container: Handled as a grid on desktop for side-by-side, column on mobile -->
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 flex flex-col md:grid md:grid-cols-2 items-center gap-12">
         
-        <!-- FIXED Image Column: Appears first on mobile layouts, switches to the right on desktop -->
-        <div class="flex-1 max-w-sm md:max-w-none w-full order-first md:order-last">
-            <a href="https://f19afosczcj6a3qmnjidv3eu4h.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
-                <!-- Changed loading to eager since this is now above the fold on mobile mobile screens -->
-                <img src="../images/soulmate-sketch.webp" 
-                     alt="Soulmate Sketch Portrait" 
-                     width="400"
-                     height="400"
-                     loading="eager"
-                     class="rounded-2xl shadow-2xl border border-rose-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto max-h-[350px] md:max-h-none object-cover">
-            </a>
-        </div>
-        
-        <!-- Copy & CTAs Column -->
-        <div class="flex-1 space-y-6 text-center md:text-left flex flex-col items-center md:items-start">
+        <!-- HEADLINE & SUB-TEXT: Appears first on mobile -->
+        <div class="space-y-4 text-center md:text-left order-1 flex flex-col items-center md:items-start">
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">
                 Are You Walking Past Your Soulmate Every Day?
             </h1>
             <p class="text-xl font-medium text-rose-200 italic">
                 One name. One soulmate drawing.
             </p>
-            <p class="text-slate-400 leading-relaxed text-base">
+            <p class="text-slate-400 leading-relaxed text-base hidden md:block">
+                A portrait drawn from the energy of your name alone — revealing the face you were always meant to find.
+            </p>
+        </div>
+        
+        <!-- IMAGE COLUMN: Placed beautifully under the headline on mobile, on the right side on desktop -->
+        <div class="max-w-sm md:max-w-none w-full order-2 md:col-start-2 md:row-start-1 md:row-span-2">
+            <a href="https://f19afosczcj6a3qmnjidv3eu4h.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" rel="noopener nofollow" target="_blank" class="block group">
+                <img src="../images/soulmate-sketch.webp" 
+                     alt="Soulmate Sketch Portrait" 
+                     width="400"
+                     height="400"
+                     loading="eager"
+                     class="rounded-2xl shadow-2xl border border-rose-500/20 group-hover:scale-[1.02] transition-transform duration-300 w-full h-auto max-h-[320px] md:max-h-none object-cover mx-auto">
+            </a>
+        </div>
+        
+        <!-- CTA & FEATURES: Sits directly under the image on mobile -->
+        <div class="space-y-6 text-center md:text-left order-3 flex flex-col items-center md:items-start w-full">
+            <p class="text-slate-400 leading-relaxed text-base md:hidden">
                 A portrait drawn from the energy of your name alone — revealing the face you were always meant to find.
             </p>
 
-            <!-- CTA Button (Full width on mobile, auto on desktop) -->
-            <div class="pt-4 w-full md:w-auto">
+            <!-- CTA Button -->
+            <div class="pt-2 w-full md:w-auto">
                 <a href="https://f19afosczcj6a3qmnjidv3eu4h.hop.clickbank.net/?&traffic_source=pinterest&traffic_type=organic" 
                    rel="noopener nofollow" 
                    class="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-rose-900/40 transform hover:-translate-y-0.5 transition-all duration-200">
@@ -71,7 +76,6 @@
     <!-- Footer & Disclaimers -->
     <footer class="bg-slate-900/60 border-t border-slate-900 py-10 px-6 text-center text-xs text-slate-500 space-y-4">
         <div class="max-w-3xl mx-auto space-y-3">
-            <!-- FIXED: Linked paths updated to connect live URLs perfectly -->
             <p class="text-slate-400 font-medium space-x-2">
                 <a href="/privacy" class="hover:text-rose-400 underline transition-colors">Privacy Policy</a> | 
                 <a href="/terms" class="hover:text-rose-400 underline transition-colors">Terms of Service</a> | 
